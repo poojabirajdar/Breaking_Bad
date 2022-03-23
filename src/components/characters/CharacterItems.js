@@ -1,12 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CharacterItems = ({item}) => {
   return ( 
+    <a href={`https://en.wikipedia.org/wiki/${item.name}_(Breaking_Bad)`}>
   <div className='card'>
   <div className='card-inner'>
+  
     <div className='card-front'>
+    
       <img src={item.img} alt='' />
     </div>
+    
+    
+
     <div className='card-back'>
       <h1>{item.name}</h1>
       <ul>
@@ -27,9 +34,12 @@ const CharacterItems = ({item}) => {
         </li>
       </ul>
     </div>
+    
   </div>
 </div>
+ </a>
 )
 }
+
 
 export default CharacterItems
